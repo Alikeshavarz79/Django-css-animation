@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressive Django Animation</title>
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .logo {
+            width: 300px;
+            animation: spin 5s infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .features {
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 2s forwards;
+            animation-delay: 5s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feature {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            animation: featurePop 1s ease-in-out;
+        }
+
+        @keyframes featurePop {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" alt="Django Logo" class="logo">
+    <div class="features">
+        <div class="feature">Robust Framework</div>
+        <div class="feature">Scalable</div>
+        <div class="feature">Secure</div>
+        <div class="feature">Versatile</div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const features = document.querySelectorAll('.feature');
+        features.forEach((feature, index) => {
+            feature.style.animationDelay = `${6 + index}s`;
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Django Power Animation</title>-->
+<!--    <link rel="stylesheet" href="styles.css">-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container">-->
+<!--    <div class="django-logo">-->
+<!--        <img src="django-logo.png" alt="Django Logo">-->
+<!--    </div>-->
+<!--    <div class="content">-->
+<!--        <h1>Welcome to Django!</h1>-->
+<!--        <p>Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.</p>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
